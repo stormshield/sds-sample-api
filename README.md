@@ -41,3 +41,29 @@ This atttribute is an array which is a subassembly of Default user informations.
  ```
  "exposedData": ["id", "email"]
   ```
+
+## How to predefine users ?
+Folder : sample-predefine-users
+
+### Configuration
+You have to edit config.js and copy your access token on it.
+```
+{
+    "token": "SDMC access token"
+}
+```
+
+### Input CSV file content
+Your input CSV file should contains a first line with headers and then data.
+
+```csv
+email;
+my-email@acme.com;
+my-email2@acme.com;
+```
+
+### Launch
+Command to execute example is:
+```
+    python predefine-users.py --config=config.json --input=input.csv
+```
